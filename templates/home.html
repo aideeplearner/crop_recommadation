@@ -1,0 +1,70 @@
+
+<html>
+    <title>
+        machine learning 
+    </title>
+    <head>
+        <h1 style="text-align:center">
+            Crop Recommadation App
+        </h1>
+        
+    </head>
+    <style>
+        input[type=number]{
+            width:40%;
+            padding:6px 1px;
+            margin:8px 0;
+            box-sizing: border-box;
+        }
+        label{
+            font-size: 20px;
+        }
+    </style>
+    <body style="background-color:powderblue;text-align: center;" >
+        <br>
+        <form action="{{url_for('predict')}}" method="post">
+
+         <label>Nitrogen:</label>
+         <input type="number" name="nitro" step="any">
+         <br>
+         <br>
+         <label>posphorus: </label>
+         <input type="number" name="pos" step="any">
+         <br>
+         <br>
+         <label>Potasium :</label>
+         <input type="number" step="any" name="pot">
+         <br>
+         <br>
+         <label>temperature:</label>
+         <input type="number" step="any" name="temp">
+         <br>
+         <br>
+         <label>humidity:</label>
+         <input type="number" step="any" name="humid">
+         <br>
+         <br>
+         <label>PH:</label>
+         <input type="number" step="any" name="ph">
+         <br>
+         <br>
+         <label>Rainfall:</label>
+         <input type="number" step="any" name="rain">
+         
+         <br>
+         <br>
+         <input type="Submit" value="predict" style="background-color:#4CAF50;color:white;padding:10px 22px;text-align:center;font-size: 16px;width:40%">
+
+        </form>
+        <br>
+        <br>
+        <h2>
+
+        {{prediction_text}}
+        
+        <h2>
+        
+        
+       
+    </body>
+</html>
